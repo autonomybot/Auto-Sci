@@ -45,9 +45,9 @@ The framework allows researchers to:
 - derive interpretable mathematical relationships; and
 - validate discovered relationships using E3SM numerical data.
 
-<p align="center">
+<!-- <p align="center">
   <img src="figures/graphical_abstract.png" width="900" alt="Auto-Sci graphical abstract">
-</p>
+</p> -->
 
 ## Demonstrated Capabilities
 
@@ -57,7 +57,7 @@ Auto-Sci organizes variables, equations, files, and their dependencies into a
 connected scientific representation.
 
 <p align="center">
-  <img src="figures/science_graph.png" width="850" alt="Auto-Sci science graph">
+  <img src="figures/figure 02.png" width="850" alt="Auto-Sci science graph">
 </p>
 
 ### 2. Trace a scientific pathway
@@ -66,7 +66,7 @@ Auto-Sci identifies the pathway connecting water density, `rho_w`, and
 turbulent kinetic energy, `savedtke1`.
 
 <p align="center">
-  <img src="figures/pathway_rho_savedtke1.png" width="850"
+  <img src="figures/figure 06.png" width="850"
        alt="Pathway connecting rho_w and savedtke1">
 </p>
 
@@ -76,7 +76,7 @@ Auto-Sci uses science-graph pathways and E3SM numerical data to derive
 testable mathematical relationships.
 
 <p align="center">
-  <img src="figures/equation_validation.png" width="800"
+  <img src="figures/figure 09.png" width="800"
        alt="Auto-Sci equation validation">
 </p>
 
