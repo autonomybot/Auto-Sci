@@ -80,33 +80,26 @@ testable mathematical relationships.
        alt="Auto-Sci equation validation">
 </p>
 
-Two example relationships discovered by Auto-Sci are:
+Two representative scientific relationships identified by Auto-Sci are presented below.
 
 ### Lake water density
 
-$$
-\widehat{\rho_w}
-=
-0.324051901\log_{10}(\mathrm{LAKE\_KME})
-+
-1001.477383107
-$$
+```math
+\widehat{\rho_w} = 0.324051901\log_{10}(\mathrm{LAKE\_KME}) + 1001.477383107
+```
+
+This relationship connects lake kinetic energy (`LAKE_KME`) with predicted lake water density (\(\widehat{\rho_w}\)).
 
 ### Soil temperature–methane relationship
 
-$$
-t_{\mathrm{soisno}}
-=
-Q_b
-+
-\frac{10}{\ln Q_m}
-\ln\left[
-\frac{\epsilon C_t-\mathcal{D}_z(C)+\mathcal{L}_{CH_4}}
-{f_m B\phi(z)/\Delta z}
-\right]
-$$
+```math
+t_{\mathrm{soisno}} = Q_b + \frac{10}{\ln Q_m}\ln\left[\frac{\epsilon C_t-\mathcal{D}_z(C)+\mathcal{L}_{CH_4}}{f_m B\phi(z)/\Delta z}\right]
+```
 
-For both relationships, the predicted values are compared with the corresponding E3SM simulation outputs to quantify predictive accuracy and assess scientific consistency.
+This relationship links soil temperature (\(t_{\mathrm{soisno}}\)) to methane production, transport, and loss processes.
+
+For both relationships, the predicted values are compared with the corresponding E3SM simulation outputs to evaluate predictive accuracy and scientific consistency.
+
 
 ---
 
