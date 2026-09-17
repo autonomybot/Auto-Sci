@@ -72,33 +72,65 @@ turbulent kinetic energy, `savedtke1`.
 
 ### 3. Discover and validate relationships
 
-Auto-Sci uses science-graph pathways and E3SM numerical data to derive 
-testable mathematical relationships.
+## Scientific Relationships Discovered by Auto-Sci
 
-<p align="center">
-  <img src="figures/Figure 09.png" width="800"
-       alt="Auto-Sci equation validation">
-</p>
+Auto-Sci identified two cross-module scientific relationships. For each relationship, the framework reconstructs the full mechanistic dependency and derives a compact symbolic surrogate.
 
-Two representative scientific relationships identified by Auto-Sci are presented below.
+### 1. Lake water density and turbulent kinetic energy
 
-### Lake water density
+The full mechanistic relationship is:
 
 ```math
-\widehat{\rho_w} = 0.324051901\log_{10}(\mathrm{LAKE\_KME}) + 1001.477383107
+\rho_w =
+\frac{
+40g(\kappa z)^2 e^{-2\kappa_s z}
+}{
+w_s^2\left[(20Ri+1)^2-1\right]
+}
+\frac{\partial \rho_w}{\partial z}
 ```
 
-This relationship connects lake kinetic energy (`LAKE_KME`) with predicted lake water density (\(\widehat{\rho_w}\)).
-
-### Soil temperature–methane relationship
+Auto-Sci then compresses this multi-equation pathway into the following interpretable surrogate:
 
 ```math
-t_{\mathrm{soisno}} = Q_b + \frac{10}{\ln Q_m}\ln\left[\frac{\epsilon C_t-\mathcal{D}_z(C)+\mathcal{L}_{CH_4}}{f_m B\phi(z)/\Delta z}\right]
+\rho_w =
+998.42
++ 0.15\log(\mathrm{savedtke1}+15.98)
++ \frac{16.89}{\mathrm{savedtke1}+15.98}
 ```
 
-This relationship links soil temperature (\(t_{\mathrm{soisno}}\)) to methane production, transport, and loss processes.
+This relationship indicates that stored turbulent kinetic energy (`savedtke1`) influences water density through coupled turbulence, stability, and stratification processes.
 
-For both relationships, the predicted values are compared with the corresponding E3SM simulation outputs to evaluate predictive accuracy and scientific consistency.
+### 2. Soil temperature and methane concentration
+
+The full mechanistic relationship is:
+
+```math
+t_{\mathrm{soisno}} =
+Q_b
++ \frac{10}{\ln Q_m}
+\ln\left[
+\frac{
+\epsilon C_t-\mathcal{D}_z(C)+\mathcal{L}_{CH_4}
+}{
+f_m B\phi(z)/\Delta z
+}
+\right]
+```
+
+Auto-Sci derives the following compact empirical surrogate:
+
+```math
+t_{\mathrm{soisno}} =
+14.27
++ 0.9363\ln\left(C+2.1\times10^{-4}\right)
+- \frac{0.00010367}{C+2.1\times10^{-4}}
+```
+
+This relationship links soil temperature (`t_soisno`) with methane concentration (\(C\)) through methane production, transport, and loss processes.
+
+For both case studies, the surrogate predictions are compared with the corresponding E3SM simulation outputs to evaluate predictive accuracy and scientific consistency.
+
 
 
 ---
