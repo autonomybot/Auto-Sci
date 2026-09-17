@@ -57,7 +57,7 @@ Auto-Sci organizes variables, equations, files, and their dependencies into a
 connected scientific representation.
 
 <p align="center">
-  <img src="figures/figure 02.png" width="850" alt="Auto-Sci science graph">
+  <img src="figures/Figure 02.png" width="850" alt="Science graph">
 </p>
 
 ### 2. Trace a scientific pathway
@@ -66,8 +66,8 @@ Auto-Sci identifies the pathway connecting water density, `rho_w`, and
 turbulent kinetic energy, `savedtke1`.
 
 <p align="center">
-  <img src="figures/figure 06.png" width="850"
-       alt="Pathway connecting rho_w and savedtke1">
+  <img src="figures/Figure 06.png" width="850"
+       alt="Pathway connecting different variables">
 </p>
 
 ### 3. Discover and validate relationships
@@ -76,7 +76,7 @@ Auto-Sci uses science-graph pathways and E3SM numerical data to derive
 testable mathematical relationships.
 
 <p align="center">
-  <img src="figures/figure 09.png" width="800"
+  <img src="figures/Figure 09.png" width="800"
        alt="Auto-Sci equation validation">
 </p>
 
